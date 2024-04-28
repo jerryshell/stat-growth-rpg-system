@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://pl6rgdxhn5gb"]
+
+[ext_resource type="Script" path="res://gui/gui.gd" id="1_xf70m"]
+
+[sub_resource type="Theme" id="Theme_gn5pc"]
+default_font_size = 30
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_xf70m")
+
+[node name="Stats" type="HBoxContainer" parent="."]
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 320.0
+offset_bottom = 535.0
+theme = SubResource("Theme_gn5pc")
+
+[node name="Attribute" type="VBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="Class" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Class"
+
+[node name="Level" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Level"
+
+[node name="ProficiencyBonus" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Proficiency Bonus"
+
+[node name="XP" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "XP"
+
+[node name="HP" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "HP"
+
+[node name="Strength" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Strength"
+
+[node name="Dexterity" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Dexterity"
+
+[node name="Constitution" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Constitution"
+
+[node name="Intelligence" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Intelligence"
+
+[node name="Wisdom" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Wisdom"
+
+[node name="Charisma" type="Label" parent="Stats/Attribute"]
+layout_mode = 2
+text = "Charisma"
+
+[node name="Spacer" type="Control" parent="Stats"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Value" type="VBoxContainer" parent="Stats"]
+layout_mode = 2
+
+[node name="Class" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Level" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="ProficiencyBonus" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="XP" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="HP" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Strength" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Dexterity" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Constitution" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Intelligence" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Wisdom" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Charisma" type="Label" parent="Stats/Value"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="XPProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 14.0
+offset_top = 565.0
+offset_right = 944.0
+offset_bottom = 636.0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 40
+
+[node name="GainXPButton" type="Button" parent="."]
+offset_left = 955.0
+offset_top = 561.0
+offset_right = 1136.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 50
+text = "GainXP"
+
+[connection signal="pressed" from="GainXPButton" to="." method="_on_gain_xp_button_pressed"]
