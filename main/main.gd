@@ -6,7 +6,7 @@ extends Node2D
 func _ready() -> void:
 	gui.player = player
 	player.stat.level.changed.connect(gui.on_player_level_changed)
-	player.stat.hp.changed.connect(gui.on_player_hp_changed)
+	player.stat.health.changed.connect(gui.on_player_health_changed)
 	player.stat.strength.changed.connect(gui.on_player_strength_changed)
 	player.stat.dexterity.changed.connect(gui.on_player_dexterity_changed)
 	player.stat.constitution.changed.connect(gui.on_player_constitution_changed)

@@ -1,4 +1,4 @@
-class_name HP
+class_name Health
 extends Resource
 
 var value: int:

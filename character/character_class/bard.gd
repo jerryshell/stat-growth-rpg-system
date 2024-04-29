@@ -14,9 +14,9 @@ func create_base_stat() -> CharaterStat:
 	base_stat.wisdom.value = 13
 	base_stat.charisma.value = 15
 
-	var base_hp: int = 8 + base_stat.constitution.modifier()
-	base_stat.hp.max = base_hp
-	base_stat.hp.value = base_hp
+	var base_health: int = 8 + base_stat.constitution.modifier()
+	base_stat.health.max = base_health
+	base_stat.health.value = base_health
 
 	return base_stat
 
@@ -24,6 +24,6 @@ func on_level_up(charater_stat: CharaterStat) -> void:
 	charater_stat.charisma.value += 1
 	charater_stat.dexterity.value += 1
 
-	var increase_hp: int = 5 + charater_stat.constitution.modifier()
-	charater_stat.hp.max += increase_hp
-	charater_stat.hp.value += increase_hp
+	var increase_health: int = 5 + charater_stat.constitution.modifier()
+	charater_stat.health.max += increase_health
+	charater_stat.health.value += increase_health

@@ -34,9 +34,9 @@ text = "Proficiency Bonus"
 layout_mode = 2
 text = "XP"
 
-[node name="HP" type="Label" parent="Stats/Attribute"]
+[node name="Health" type="Label" parent="Stats/Attribute"]
 layout_mode = 2
-text = "HP"
+text = "Health"
 
 [node name="Strength" type="Label" parent="Stats/Attribute"]
 layout_mode = 2
@@ -85,7 +85,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
-[node name="HP" type="Label" parent="Stats/Value"]
+[node name="Health" type="Label" parent="Stats/Value"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
