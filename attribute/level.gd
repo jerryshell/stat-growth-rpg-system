@@ -20,7 +20,7 @@ var xp: int:
 
 			if xp < next_level_xp():
 				return
-			increse_level()
+			increase_level()
 
 func _init(_level: int, _xp: int) -> void:
 	value = _level
@@ -35,7 +35,7 @@ func level_xp() -> int:
 func next_level_xp() -> int:
 	return XpDatabase.level_xp_at(value + 1)
 
-func increse_level() -> void:
+func increase_level() -> void:
 	value += 1
 	level_up.emit()
 
