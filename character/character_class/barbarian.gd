@@ -24,6 +24,6 @@ func on_level_up(charater_stat: CharaterStat) -> void:
 	charater_stat.strength.value += 1
 	charater_stat.constitution.value += 1
 
-	var incres_hp: int = 7 + charater_stat.constitution.modifier()
-	charater_stat.hp.max_value += incres_hp
-	charater_stat.hp.value += incres_hp
+	var increase_hp: int = 7 + charater_stat.constitution.modifier()
+	charater_stat.hp.max_value += increase_hp
+	charater_stat.hp.value += increase_hp
