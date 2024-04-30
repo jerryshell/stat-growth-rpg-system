@@ -1,16 +1,16 @@
 class_name CharaterStat
 extends Resource
 
-var level: Level = Level.new(1, 0)
+var level := Level.new(1, 0)
 
-var health: Health = Health.new(10, 10)
+var health := Health.new(10, 10)
 
-var strength: Ability = Ability.new(5)
-var dexterity: Ability = Ability.new(5)
-var constitution: Ability = Ability.new(5)
-var intelligence: Ability = Ability.new(5)
-var wisdom: Ability = Ability.new(5)
-var charisma: Ability = Ability.new(5)
+var strength := Ability.new(5)
+var dexterity := Ability.new(5)
+var constitution := Ability.new(5)
+var intelligence := Ability.new(5)
+var wisdom := Ability.new(5)
+var charisma := Ability.new(5)
 
 func _init(_level: Level, _health: Health, _strength: Ability, _dexterity: Ability, _constitution: Ability, _intelligence: Ability, _wisdom: Ability, _charisma: Ability) -> void:
     level = _level

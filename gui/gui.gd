@@ -27,8 +27,8 @@ func _process(_delta: float) -> void:
 	wisdom.text = "%s (%+d)" % [PlayerData.stat.wisdom.value, PlayerData.stat.wisdom.modifier()]
 	charisma.text = "%s (%+d)" % [PlayerData.stat.charisma.value, PlayerData.stat.charisma.modifier()]
 	# xp_progress_bar
-	var level_xp: int = PlayerData.stat.level.level_xp()
-	var next_level_xp: int = PlayerData.stat.level.next_level_xp()
+	var level_xp := PlayerData.stat.level.level_xp()
+	var next_level_xp := PlayerData.stat.level.next_level_xp()
 	xp_progress_bar.max_value = next_level_xp - level_xp
 	xp_progress_bar.value = PlayerData.stat.level.xp - level_xp
 
