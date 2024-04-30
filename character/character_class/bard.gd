@@ -5,25 +5,24 @@ func name() -> String:
 	return "Bard"
 
 func create_base_stat() -> CharaterStat:
-	var base_stat: CharaterStat = CharaterStat.new()
+	var level = Level.new(1, 0)
 
-	base_stat.strength.value = 8
-	base_stat.dexterity.value = 14
-	base_stat.constitution.value = 10
-	base_stat.intelligence.value = 12
-	base_stat.wisdom.value = 13
-	base_stat.charisma.value = 15
+	var strength = Ability.new(8)
+	var dexterity = Ability.new(14)
+	var constitution = Ability.new(10)
+	var intelligence = Ability.new(12)
+	var wisdom = Ability.new(13)
+	var charisma = Ability.new(15)
 
-	var base_health: int = 8 + base_stat.constitution.modifier()
-	base_stat.health.max = base_health
-	base_stat.health.value = base_health
+	var base_health = 8 + constitution.modifier()
+	var health = Health.new(base_health, base_health)
 
-	return base_stat
+	return CharaterStat.new(level, health, strength, dexterity, constitution, intelligence, wisdom, charisma)
 
-func on_level_up(charater_stat: CharaterStat) -> void:
-	charater_stat.charisma.value += 1
-	charater_stat.dexterity.value += 1
+func on_level_up(stat: CharaterStat) -> void:
+	stat.charisma.value += 1
+	stat.dexterity.value += 1
 
-	var increase_health: int = 5 + charater_stat.constitution.modifier()
-	charater_stat.health.max += increase_health
-	charater_stat.health.value += increase_health
+	var increase_health = 5 + stat.constitution.modifier()
+	stat.health.max += increase_health
+	stat.health.value += increase_health
