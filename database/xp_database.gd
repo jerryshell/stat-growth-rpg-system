@@ -26,4 +26,4 @@ const XP_TABLE = {
 const MAX_LEVEL = 20
 
 func level_xp_at(level: int) -> int:
-	return XP_TABLE.get(level, -1)
+	return XP_TABLE.get(level, INF)
